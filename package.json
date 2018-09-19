@@ -1,0 +1,15 @@
+{
+  "name": "worktracker-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/datastore": "^1.4.2",
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,14 @@
+version: '2'
+services:
+  gcloud-datastore:
+    image: google/cloud-sdk:latest
+    ports:
+      - 8432:8432
+    command: gcloud beta emulators datastore start --project=pi-docker --host-port gcloud-datastore:8432 --no-store-on-disk
+  worktracker-node:
+      image: worktracker-node:latest
+      ports:
+        - 3000:3000
+      environment:
+        - DATASTORE_EMULATOR_HOST=gcloud-datastore:8432
+        - DATASTORE_PROJECT_ID=worktracker

@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "DATASTORE_EMULATOR_HOST=8432 DATASTORE_PROJECT_ID=worktracker nodemon index.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "moment": "^2.22.2"
   }
 }
